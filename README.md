@@ -34,10 +34,7 @@ O software foi projetado com foco em:
 
 ## Demonstração
 
-<p align="center">
-  <!-- Substitua pelo GIF real do app -->
-  <img src="./assets/demo.gif" alt="Demo do app Pillow Princess" width="320" />
-</p>
+[Assista ao vídeo de demonstração no Google Drive](https://drive.google.com/drive/u/0/folders/1VqQnLJFxfQ1Yf8r4rg6T81i3MyrTyopY)
 
 ---
 
