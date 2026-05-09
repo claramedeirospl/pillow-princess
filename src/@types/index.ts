@@ -100,6 +100,7 @@ export type Screen =
   | "cart"
   | "checkout"
   | "order-tracking"
+  | "order-success"
   | "orders"
   | "profile"
   | "add-address"

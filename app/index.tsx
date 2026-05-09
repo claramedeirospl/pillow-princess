@@ -16,6 +16,7 @@ import { CartScreen } from "@/features/cart/CartScreen";
 import { CheckoutScreen } from "@/features/checkout/CheckoutScreen";
 import { OrdersListScreen } from "@/features/orders/OrdersListScreen";
 import { OrderTrackingScreen } from "@/features/orders/OrderTrackingScreen";
+import { OrderSuccessScreen } from "@/features/orders/OrderSuccessScreen";
 import { ProfileScreen } from "@/features/profile/ProfileScreen";
 import { AddAddressScreen } from "@/features/profile/AddAddressScreen";
 import { AddPaymentScreen } from "@/features/profile/AddPaymentScreen";
@@ -58,6 +59,7 @@ export default function App() {
       {screen === "checkout" && <CheckoutScreen />}
       {screen === "orders" && <OrdersListScreen />}
       {screen === "order-tracking" && <OrderTrackingScreen />}
+      {screen === "order-success" && <OrderSuccessScreen />}
       {screen === "profile" && <ProfileScreen />}
       {screen === "add-address" && <AddAddressScreen />}
       {screen === "add-payment" && <AddPaymentScreen />}

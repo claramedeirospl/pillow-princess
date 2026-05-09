@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { useAuthStore } from "@/store/authStore";
 import { useCartStore } from "@/store/cartStore";
 import { useOrdersStore } from "@/store/ordersStore";
 import { useNavigationStore } from "@/store/navigationStore";
 import { useToastStore } from "@/store/toastStore";
-import type { Address, Payment, Order } from "@/@types";
+import { useCheckoutStore } from "@/store/checkoutStore";
+import type { Order } from "@/@types";
 
 export function useCheckout() {
-  const [step, setStep] = useState<0 | 1 | 2>(0);
-  const [selectedAddress, setSelectedAddress] = useState<Address | null>(null);
-  const [selectedPayment, setSelectedPayment] = useState<Payment | null>(null);
+  const step = useCheckoutStore((s) => s.step);
+  const setStep = useCheckoutStore((s) => s.setStep);
+  const selectedAddress = useCheckoutStore((s) => s.selectedAddress);
+  const setSelectedAddress = useCheckoutStore((s) => s.setSelectedAddress);
+  const selectedPayment = useCheckoutStore((s) => s.selectedPayment);
+  const setSelectedPayment = useCheckoutStore((s) => s.setSelectedPayment);
+  const reset = useCheckoutStore((s) => s.reset);
 
   const user = useAuthStore((s) => s.user);
   const items = useCartStore((s) => s.items);
@@ -25,8 +30,24 @@ export function useCheckout() {
   const addresses = user?.addresses ?? [];
   const payments = user?.payments ?? [];
 
+  // Auto-select the most recently added address/payment so the user
+  // doesn't have to re-select after navigating to add-address / add-payment.
+  useEffect(() => {
+    if (!selectedAddress && addresses.length > 0) {
+      setSelectedAddress(addresses[addresses.length - 1]);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [addresses.length]);
+
+  useEffect(() => {
+    if (!selectedPayment && payments.length > 0) {
+      setSelectedPayment(payments[payments.length - 1]);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [payments.length]);
+
   function nextStep() {
-    setStep((s) => Math.min(s + 1, 2) as 0 | 1 | 2);
+    setStep(Math.min(step + 1, 2) as 0 | 1 | 2);
   }
 
   function goToStep(s: 0 | 1 | 2) {
@@ -55,8 +76,9 @@ export function useCheckout() {
     addOrder(order);
     clearCart();
     setSelectedOrder(order);
+    reset();
     show("Pedido realizado com sucesso! 🎉");
-    navigate("order-tracking");
+    navigate("order-success");
   }
 
   return {
