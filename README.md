@@ -1,6 +1,6 @@
 <h1 align="center">
   <br />
-  🌸 Pillow Princess
+  Pillow Princess
   <br />
 </h1>
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 🛍️ Sobre o Projeto
+## Sobre o Projeto
 
 **Pillow Princess** é um ecossistema de e-commerce mobile-first construído para oferecer uma experiência de compra fluida, visualmente atraente e exclusiva. O conceito da marca vai além de uma loja comum — é um clube de confiança para quem valoriza conforto e estética no seu íntimo.
 
@@ -32,7 +32,7 @@ O software foi projetado com foco em:
 
 ---
 
-## ✨ Demonstração
+## Demonstração
 
 <p align="center">
   <!-- Substitua pelo GIF real do app -->
@@ -41,26 +41,26 @@ O software foi projetado com foco em:
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 | Feature | Descrição |
 |---|---|
-| 🔐 **Autenticação** | Login e cadastro com validação, roles (admin / user) e persistência de sessão |
-| 🏠 **Home personalizada** | Saudação por nome, categorias, produtos em destaque e banners dinâmicos via API |
-| 🛍️ **Catálogo dinâmico** | Filtro por categoria, busca, grade e lista — dados gerenciados por TanStack Query |
-| 🔍 **Detalhe do produto** | Seleção de tamanho e cor, galeria, preço promocional e "Adicionar ao carrinho" |
-| 🛒 **Carrinho inteligente** | Controle de quantidade, cálculo de frete automático e indicador de frete grátis |
-| 💳 **Checkout em 3 etapas** | Endereço → Pagamento → Revisão, com estado persistente entre telas |
-| 💚 **PIX com QR Code** | Geração de QR Code e código copia-e-cola ao finalizar com PIX |
-| 📦 **Rastreamento de pedido** | Timeline de status em tempo real após a confirmação |
-| 👤 **Perfil completo** | Gerenciamento de endereços, métodos de pagamento e histórico de pedidos |
-| ⚙️ **Painel Admin** | Gestão de produtos exclusiva para administradores |
+| **Autenticação** | Login e cadastro com validação, roles (admin / user) e persistência de sessão |
+| **Home personalizada** | Saudação por nome, categorias, produtos em destaque e banners dinâmicos via API |
+| **Catálogo dinâmico** | Filtro por categoria, busca, grade e lista — dados gerenciados por TanStack Query |
+| **Detalhe do produto** | Seleção de tamanho e cor, galeria, preço promocional e "Adicionar ao carrinho" |
+| **Carrinho inteligente** | Controle de quantidade, cálculo de frete automático e indicador de frete grátis |
+| **Checkout em 3 etapas** | Endereço → Pagamento → Revisão, com estado persistente entre telas |
+| **PIX com QR Code** | Geração de QR Code e código copia-e-cola ao finalizar com PIX |
+| **Rastreamento de pedido** | Timeline de status em tempo real após a confirmação |
+| **Perfil completo** | Gerenciamento de endereços, métodos de pagamento e histórico de pedidos |
+| **Painel Admin** | Gestão de produtos exclusiva para administradores |
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-### 📱 Frontend — Mobile
+### Frontend — Mobile
 
 | Tecnologia | Versão | Função |
 |---|---|---|
@@ -73,7 +73,7 @@ O software foi projetado com foco em:
 | NativeWind | 4.1.23 | Tailwind CSS para React Native |
 | expo-linear-gradient | ~14.0 | Gradientes nas telas e componentes |
 
-### 🖥️ Backend — API
+### Backend — API
 
 | Tecnologia | Função |
 |---|---|
@@ -81,7 +81,7 @@ O software foi projetado com foco em:
 | TypeScript | Tipagem end-to-end entre frontend e backend |
 | REST API | Endpoints para produtos, usuários, pedidos e anúncios |
 
-### 🎨 UI & Design System
+### UI & Design System
 
 - Componentes atômicos próprios: `Button`, `Input`, `Card`, `Badge`, `Toast`, `BottomNav`, `ScreenHeader`
 - Tema centralizado em `src/styles/theme.ts` (cores, espaçamentos, border-radius)
@@ -90,7 +90,7 @@ O software foi projetado com foco em:
 
 ---
 
-## 📁 Arquitetura
+## Arquitetura
 
 O projeto segue uma **arquitetura modular por domínio** (Feature-Sliced Design), separando responsabilidades de forma clara:
 
@@ -128,7 +128,7 @@ pillow-princess/
 
 ---
 
-## ⚙️ Como Rodar o Projeto
+## Como Rodar o Projeto
 
 ### Pré-requisitos
 
@@ -187,7 +187,7 @@ npx expo start --ios
 
 ---
 
-## 🤝 Contribuindo
+## Contribuindo
 
 1. Faça um fork do projeto
 2. Crie uma branch: `git checkout -b feature/minha-feature`
@@ -197,7 +197,7 @@ npx expo start --ios
 
 ---
 
-## 📄 Licença
+## Licença
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
