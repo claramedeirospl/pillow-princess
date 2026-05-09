@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Pillow Princess",
+    "slug": "pillow-princess",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.pillowprincess.app"
+    },
+    "android": {
+      "package": "com.pillowprincess.app"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-asset"
+    ],
+    "scheme": "pillowprincess"
+  }
+}
